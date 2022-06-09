@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/gray"
+    android:id="@+id/parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:fontFamily="@font/fjord_one"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp" />
+
+    <ImageView
+        android:layout_width="343dp"
+        android:layout_height="187dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/heartfood" />
+
+    <TextView
+        android:id="@+id/txtWarnEmail"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="310dp"
+        android:text="textview"
+        android:textColor="@color/red" />
+
+    <EditText
+        android:id="@+id/edtLoginPhone"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:background="@drawable/rectangle_bg"
+        android:drawableStart="@drawable/ic_baseline_phone_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/fjord_one"
+        android:hint="0722000000"
+        android:inputType="phone"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:id="@+id/txtWarnPassword"
+        android:visibility="gone"
+        android:layout_marginLeft="45dp"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:text="textview"
+        android:layout_centerHorizontal="false"/>
+
+    <EditText
+        android:id="@+id/edtLoginPassword"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/rectangle_bg"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/fjord_one"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black" />
+
+    <CheckBox
+        android:id="@+id/checkRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="472dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/checkRememberMe"
+        android:text="Remember Me"
+        android:textColor="@color/black"
+        android:layout_marginTop="475dp"
+        android:textSize="18dp"
+        android:textAlignment="center"/>
+
+
+    <Button
+        android:id="@+id/btnLoginButton"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="520dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/fjord_one"
+        android:text="login"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password  ?"
+        android:layout_marginTop="580dp"
+        android:layout_marginLeft="245dp"/>
+
+    <TextView
+        android:id="@+id/txtDontHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="640dp"
+        android:text="Don't have an Account ? "
+        android:layout_marginLeft="75dp"
+        android:textSize="19dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtGoToRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="640dp"
+        android:layout_toRightOf="@+id/txtDontHaveAnAccount"
+        android:text="Register"
+        android:textColor="@color/green"
+        android:textSize="19dp" />
+
+
+
+
+</RelativeLayout>

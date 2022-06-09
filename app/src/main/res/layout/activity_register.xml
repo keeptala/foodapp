@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="#BDC5CD"
+    android:id="@+id/parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/fjord_one"
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:layout_width="343dp"
+        android:layout_height="187dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/heartfood" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtWarnUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="280dp"
+        android:text="textview"
+        android:textColor="@color/red" />
+
+    <EditText
+        android:id="@+id/edtTxtUserName"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/rectangle_bg"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/fjord_one"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtWarnEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="380dp"
+        android:text="textview"
+        android:textColor="@color/red" />
+
+    <EditText
+        android:id="@+id/edtRegisterPhone"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/rectangle_bg"
+        android:drawableStart="@drawable/ic_baseline_phone_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/fjord_one"
+        android:hint="0722000000"
+        android:inputType="phone"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtWarnPassword"
+        android:layout_marginLeft="45dp"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:text="textview"
+        android:layout_centerHorizontal="false"/>
+
+    <EditText
+        android:id="@+id/edtTxtPassword"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/rectangle_bg"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/fjord_one"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black" />
+
+    <CheckBox
+        android:id="@+id/checkBoxShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="550dp"
+        android:text="show password"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+
+
+    <Button
+        android:id="@+id/btnGetToLogin"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/fjord_one"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txtAlreadyRegistered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="680dp"
+        android:fontFamily="@font/fjord_one"
+        android:text="Already a User ? "
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/btnGetToLoginTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="680dp"
+        android:layout_toRightOf="@+id/txtAlreadyRegistered"
+        android:fontFamily="@font/fjord_one"
+        android:text="Login now"
+        android:textColor="@color/green"
+        android:textSize="19dp"
+        tools:ignore="DuplicateIds" />
+
+</RelativeLayout>
