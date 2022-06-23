@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@color/gray"
+    android:background="@color/white"
     android:id="@+id/parent">
 
     <TextView
@@ -51,9 +51,11 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:fontFamily="@font/fjord_one"
-        android:hint="0722000000"
+        android:hint="Mobile number"
         android:inputType="phone"
-        android:textColorHint="@color/black" />
+        android:maxLength="10"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:id="@+id/txtWarnPassword"
@@ -79,28 +81,31 @@
         android:fontFamily="@font/fjord_one"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="@color/black" />
+        android:paddingStart="10dp"
+        android:textColorHint="@color/gray" />
 
     <CheckBox
-        android:id="@+id/checkRememberMe"
+        android:id="@+id/checkboxShowPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="472dp" />
+        android:layout_marginTop="472dp"
+        android:buttonTint="@color/green" />
 
     <TextView
+        android:id="@+id/txtShowPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/checkRememberMe"
-        android:text="Remember Me"
-        android:textColor="@color/black"
         android:layout_marginTop="475dp"
-        android:textSize="18dp"
-        android:textAlignment="center"/>
+        android:layout_toRightOf="@id/checkboxShowPass"
+        android:text="show password"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
 
 
     <Button
-        android:id="@+id/btnLoginButton"
+        android:id="@+id/addToCartBtn"
         android:layout_width="343dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
@@ -115,11 +120,12 @@
         android:textColor="@color/white" />
 
     <TextView
+        android:textColor="@color/green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot Password  ?"
+        android:layout_marginLeft="245dp"
         android:layout_marginTop="580dp"
-        android:layout_marginLeft="245dp"/>
+        android:text="Forgot Password  ?" />
 
     <TextView
         android:id="@+id/txtDontHaveAnAccount"

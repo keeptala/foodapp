@@ -3,5 +3,6 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/fjalla_one</item>
         <item>@font/fjord_one</item>
+        <item>@font/irish_grover</item>
     </array>
 </resources>

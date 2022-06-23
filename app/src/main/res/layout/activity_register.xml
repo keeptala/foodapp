@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:background="#BDC5CD"
+    android:background="@color/white"
     android:id="@+id/parent">
 
     <TextView
@@ -47,14 +47,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
         android:background="@drawable/rectangle_bg"
-        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawableStart="@drawable/ic_baseline_person"
         android:drawablePadding="10dp"
         android:ems="10"
         android:fontFamily="@font/fjord_one"
         android:hint="Username"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/black" />
+        android:maxLength="10"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:visibility="gone"
@@ -78,9 +80,11 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:fontFamily="@font/fjord_one"
-        android:hint="0722000000"
+        android:hint="Mobile number"
         android:inputType="phone"
-        android:textColorHint="@color/black" />
+        android:maxLength="10"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:visibility="gone"
@@ -106,7 +110,8 @@
         android:fontFamily="@font/fjord_one"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="@color/black" />
+        android:paddingStart="10dp"
+        android:textColorHint="@color/gray" />
 
     <CheckBox
         android:id="@+id/checkBoxShow"
@@ -115,8 +120,9 @@
         android:layout_marginLeft="35dp"
         android:layout_marginTop="550dp"
         android:text="show password"
+        android:textColor="@color/black"
         android:textSize="18sp"
-        android:textColor="@color/black" />
+        android:buttonTint="@color/green"/>
 
 
     <Button

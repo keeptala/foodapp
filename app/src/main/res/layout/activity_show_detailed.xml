@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowDetailActivity">
+
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/irish_grover"
+        android:text="title"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/feeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTxt"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/fjord_one"
+        android:paddingStart="10dp"
+        android:text="kes:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/picFood"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/feeTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pizzatwo" />
+
+
+    <ImageView
+        android:id="@+id/plusBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/picFood"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/plusone" />
+
+    <TextView
+        android:id="@+id/numberOrderTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picFood"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="25dp"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/minusBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/picFood"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/minus" />
+
+    <TextView
+        android:id="@+id/descriptionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberOrderTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/fjord_one"
+        android:text="description"
+        android:textColor="@color/black"
+        android:paddingStart="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addToCartBtn"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/fjord_one"
+        android:text="add to cart"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>

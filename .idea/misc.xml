@@ -3,28 +3,65 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable-v24/cat_background1.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable-v24/cat_background2.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable-v24/cat_background3.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable-v24/cat_background4.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/cart_bg.xml" value="0.235" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/cat_background.xml" value="0.1" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/cat_background1.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/cat_background2.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/cat_background3.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/cat_background4.xml" value="0.326" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/delivery_background.xml" value="0.2325" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/deliveryguy.xml" value="0.2325" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.207" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2985" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.238" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2985" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_person.xml" value="0.326" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2985" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.209" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.238" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_baseline_support_agent_24.xml" value="0.238" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/ic_shopping_cart.xml" value="0.238" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/rectangle_bg.xml" value="0.2985" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/round_bg.xml" value="0.3395" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/round_button.xml" value="0.2985" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/drawable/seach_background.xml" value="0.2325" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_cart.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_get_started.xml" value="0.36102564102564105" />
-        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_home.xml" value="0.381025641025641" />
-        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_main.xml" value="0.20658682634730538" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_home.xml" value="0.18" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_main2.xml" value="0.1125" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_main_menu.xml" value="0.36102564102564105" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_profile.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_settings.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_show_detailed.xml" value="0.33" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_support.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/activity_terms.xml" value="0.36102564102564105" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/app_bar_home.xml" value="0.381025641025641" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/category_list_item.xml" value="0.33" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/content_home.xml" value="0.381025641025641" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_blank.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_cart.xml" value="0.25" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_cart2.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_gallery.xml" value="0.381025641025641" />
-        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_home.xml" value="0.381025641025641" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_profile.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_settings.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_slideshow.xml" value="0.381025641025641" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/fragment_support.xml" value="0.25" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/menu_item.xml" value="0.22" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/nav_header_home.xml" value="0.381025641025641" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/viewholder_cart.xml" value="0.33" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/viewholder_category.xml" value="0.33" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/layout/viewholder_popular.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/menu/activity_main_drawer.xml" value="0.381025641025641" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />
+        <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/menu/bottom_nav_meny.xml" value="0.33" />
         <entry key="..\:/Users/krasher/AndroidStudioProjects/fooddeliveryapp/app/src/main/res/menu/home.xml" value="0.38697916666666665" />
       </map>
     </option>

@@ -1,5 +1,7 @@
 package com.example.fooddeliveryapp;
 
+
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private RelativeLayout parent;
     private CheckBox checkBoxShow;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,11 @@ public class RegisterActivity extends AppCompatActivity {
 
         initializeRegister();
         txtOnClickTxt();
+
+        String regex = "^(?=.*[0-9])"
+                + "(?=.*[a-z])(?=.*[A-Z])"
+                + "(?=.*[@#$%^&+=])"
+                + "(?=\\S+$).{8,20}$";
 
         checkBoxShow.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -70,27 +78,20 @@ public class RegisterActivity extends AppCompatActivity {
                         if (snapshot.child(edtRegisterPhone.getText().toString()).exists()){
                             mDialog.dismiss();
 
-                            if (!edtTextUserName.getText().toString().equals("")){
-                                txtWarnUserName.setVisibility(View.GONE);
-                                if (!edtRegisterPhone.getText().toString().equals("")){
-                                    txtWarnEmail.setVisibility(View.GONE);
-                                    if (!edtTxtPassword.getText().toString().equals("")){
-                                        txtWarnPassword.setVisibility(View.GONE);
-                                        Toast.makeText(RegisterActivity.this, "You are already registered using this phone: "+edtRegisterPhone.getText().toString(), Toast.LENGTH_SHORT).show();
-                                    }else{
-                                        txtWarnPassword.setVisibility(View.VISIBLE);
-                                        txtWarnPassword.setText("Please enter your password !");
-                                    }
-                                }else {
-                                    txtWarnEmail.setVisibility(View.VISIBLE);
-                                    txtWarnEmail.setText("Please enter your phone number !");
-                                }
-                            } else {
-                                txtWarnUserName.setVisibility(View.VISIBLE);
-                                txtWarnUserName.setText("Please enter your username !");
-                                Toast.makeText(RegisterActivity.this, " Fill all the forms ! ", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
+                            // TO DO
+                            // fix the user already register  if the  phone number matches  on that we have already in the database
+
+
+                            checkCredentials();
+                        } else if (edtTxtPassword.getText().toString().equals("") || !edtTxtPassword.getText().toString().matches(regex)){
+                            mDialog.dismiss();
+                            txtWarnPassword.setVisibility(View.VISIBLE);
+                            txtWarnPassword.setText("weak password !");
+                            Toast.makeText(RegisterActivity.this, "password must have @least one uppercase, lowercase and a symbol ", Toast.LENGTH_SHORT).show();
+                            txtWarnEmail.setVisibility(View.GONE);
+                        }
+                        else {
+                            txtWarnPassword.setVisibility(View.GONE);
                             User user = new User(edtTextUserName.getText().toString(), edtTxtPassword.getText().toString());
                             table_user.child(edtRegisterPhone.getText().toString()).setValue(user);
                             Toast.makeText(RegisterActivity.this, "You have Registered successfully", Toast.LENGTH_SHORT).show();
@@ -108,80 +109,25 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-//        btnGetToLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                Register();
-//                        if (ValidateData()){
-////            showSnackbar();
-//        } else{
-//            Toast.makeText(RegisterActivity.this, " Please fill all the fields ", Toast.LENGTH_SHORT).show();
-//        }
-//            }
-//        });
+
 
     }
 
-//    private void Register() {
-//        Log.d(TAG, "Register: Started");
-//        if (ValidateData()){
-//            showSnackbar();
-//        } else{
-//            Toast.makeText(RegisterActivity.this, " Please fill all the fields ", Toast.LENGTH_SHORT).show();
-//        }
-//    }
+    private void checkCredentials() {
+        String name = edtTextUserName.getText().toString();
+        String phone = edtRegisterPhone.getText().toString();
 
-//    private void showSnackbar() {
-//        Log.d(TAG, "showSnackbar: Started");
-//        txtWarnPassword.setVisibility(View.GONE);
-//        txtWarnEmail.setVisibility(View.GONE);
-//        txtWarnUserName.setVisibility(View.GONE);
-//        txtWarnPassRepeat.setVisibility(View.GONE);
-//
-//        Snackbar.make(parent, "User Registered", Snackbar.LENGTH_INDEFINITE)
-//                .setAction("Login", new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intent3 = new Intent(RegisterActivity.this, LoginActivity.class);
-//                        startActivity(intent3);
-//                    }
-//                }).show();
-//    }
-//
-//    private boolean ValidateData() {
-//
-//        Log.d(TAG, "ValidateData: Started");
-//        if (edtTextUserName.getText().toString().equals("")){
-//            txtWarnUserName.setVisibility(View.VISIBLE);
-//            txtWarnUserName.setText("Please Enter Your Username!");
-//            return false;
-//        }
-//
-//        if (edtRegisterPhone.getText().toString().equals("")){
-//            txtWarnEmail.setVisibility(View.VISIBLE);
-//            txtWarnEmail.setText("Please Enter Your Email!");
-//            return false;
-//        }
-//
-//        if (edtTxtPassword.getText().toString().equals("")){
-//            txtWarnPassword.setVisibility(View.VISIBLE);
-//            txtWarnPassword.setText("Please Enter You Password!");
-//            return false;
-//        }
-//
-//        if (edtTxtpassRepeat.getText().toString().equals("Please repeat your Password")){
-//            txtWarnPassRepeat.setVisibility(View.VISIBLE);
-//            return false;
-//        }
-//
-//        if (!edtTxtPassword.getText().toString().equals(edtTxtpassRepeat.getText().toString())){
-//            txtWarnPassRepeat.setVisibility(View.VISIBLE);
-//            txtWarnPassRepeat.setText("The Passwords don't match !");
-//            return false;
-//        }
-//
-//        return true;
-//    }
+        if (name.isEmpty() || name.length() < 4){
+            txtWarnUserName.setVisibility(View.VISIBLE);
+            txtWarnUserName.setText("Username not valid");
+        } else if (phone.isEmpty() || !phone.matches("^[0-9]{10,}$")){
+            txtWarnEmail.setVisibility(View.VISIBLE);
+            txtWarnEmail.setText("phone number not valid");
+            txtWarnUserName.setVisibility(View.GONE);
+        } else {
+
+        }
+    }
 
     private void txtOnClickTxt() {
         txtGetToLogin.setOnClickListener(new View.OnClickListener() {
@@ -194,15 +140,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
- /*   private void btnOnClickBtn() {
-        btnGetToLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-    }*/
 
     private void initializeRegister() {
         checkBoxShow = findViewById(R.id.checkBoxShow);

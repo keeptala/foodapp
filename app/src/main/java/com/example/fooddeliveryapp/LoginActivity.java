@@ -3,8 +3,12 @@ package com.example.fooddeliveryapp;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,7 +17,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtLoginPhone, edtLoginPassword;
     private RelativeLayout parent;
     private Button btnLoginButton;
+    private CheckBox checkboxShowPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,17 @@ public class LoginActivity extends AppCompatActivity {
         initializeGoTORegister();
         getToRegister();
 
+        checkboxShowPass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    edtLoginPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    edtLoginPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference table_user = database.getReference("User");
 
@@ -46,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    ProgressDialog mDialog = new ProgressDialog(LoginActivity.this);
+                ProgressDialog mDialog = new ProgressDialog(LoginActivity.this);
                     mDialog.setMessage("loading , be patient :) ");
                     mDialog.show();
 
@@ -63,25 +78,21 @@ public class LoginActivity extends AppCompatActivity {
                                         User user = snapshot.child(edtLoginPhone.getText().toString()).getValue(User.class);
                                         if (user.getPassword().equals(edtLoginPassword.getText().toString()) && !edtLoginPassword.getText().toString().equals("")) {
                                             txtWarnPassword.setVisibility(View.GONE);
-                                            Intent homeIntent = new Intent(LoginActivity.this,MainMenuActivity.class);
+                                            Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
+                                            Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
                                             startActivity(homeIntent);
-                                            finish();
 
                                         } else {
                                             txtWarnPassword.setVisibility(View.VISIBLE);
-                                            txtWarnPassword.setText("Please enter your password !");
-                                            Snackbar.make(parent, "", Snackbar.LENGTH_SHORT)
-                                                    .setText("you might have entered an incorrect Password !").show();
+                                            txtWarnPassword.setText("Enter a non empty and correct password !");
 
 
                                         }
                                     } else {
                                         mDialog.dismiss();
                                         txtWarnEmail.setVisibility(View.VISIBLE);
-                                        txtWarnEmail.setText("Please enter your phone number !");
+                                        txtWarnEmail.setText("Enter a non empty and correct phone number!");
                                         Toast.makeText(LoginActivity.this, "You have to fill in the your correct number and Password !", Toast.LENGTH_SHORT).show();
-                                        Snackbar.make(parent, "", Snackbar.LENGTH_SHORT)
-                                                .setText("you might have entered an incorrect phone number or password !").show();
 
                                     }
                         }
@@ -172,13 +183,15 @@ public class LoginActivity extends AppCompatActivity {
 //    }
 
     private void initializeGoTORegister() {
+
         txtGoToRegister = findViewById(R.id.txtGoToRegister);
         parent = findViewById(R.id.parent);
         txtWarnEmail = findViewById(R.id.txtWarnEmail);
         txtWarnPassword = findViewById(R.id.txtWarnPassword);
         edtLoginPhone = findViewById(R.id.edtLoginPhone);
         edtLoginPassword = findViewById(R.id.edtLoginPassword);
-        btnLoginButton = findViewById(R.id.btnLoginButton);
+        btnLoginButton = findViewById(R.id.addToCartBtn);
+        checkboxShowPass = findViewById(R.id.checkboxShowPass);
 
     }
 }
