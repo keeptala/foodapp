@@ -7,8 +7,139 @@
     tools:context=".ProfileActivity">
 
     <TextView
+        android:id="@+id/profileTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="my profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/irish_grover"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:layout_above="@id/usernameEdt"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="-70dp"
+        android:fontFamily="@font/irish_grover"
+        android:text="Username"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/usernameEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileTxt"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="32dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone number"
+        android:layout_above="@+id/phoneEdt"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/irish_grover"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/phoneEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameEdt"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="32dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/passchangeTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneEdt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/irish_grover"
+        android:text="change password"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/currentEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passchangeTxt"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="32dp"
+        android:hint="current password" />
+
+    <EditText
+        android:id="@+id/newEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentEdt"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="32dp"
+        android:hint="new password"
+        tools:ignore="UnknownId" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/newEdt"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/fjord_one"
+        android:text="Change password"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/fjord_one"
+        android:text="Logout"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:layout_centerVertical="true"
+        style="?android:attr/progressBarStyleLarge"/>
+
 
 </RelativeLayout>

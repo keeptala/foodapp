@@ -9,25 +9,28 @@
     android:id="@+id/parent">
 
     <TextView
+        android:id="@+id/registerTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/fjord_one"
+        android:fontFamily="@font/irish_grover"
         android:text="REGISTER"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="24dp"
         android:textStyle="bold" />
 
 
-    <ImageView
-        android:layout_width="343dp"
-        android:layout_height="187dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/registerTxt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:src="@drawable/heartfood" />
+        android:layout_marginTop="30dp"
+        app:lottie_rawRes="@raw/userlogingreen"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
     <TextView
         android:visibility="gone"

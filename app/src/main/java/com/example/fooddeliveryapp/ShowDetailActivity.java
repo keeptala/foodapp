@@ -27,9 +27,23 @@ public class ShowDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_detailed);
 
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Foods");
+
         ManagementCart managementCart = new ManagementCart(this);
+
+
         initView();
         getBundle();
+
+        addToCartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                object.setNumberIntCart(numberOrder);
+                managementCart.insertFood(object);
+            }
+        });
+
     }
 
     private void getBundle() {
@@ -63,13 +77,7 @@ public class ShowDetailActivity extends AppCompatActivity {
             }
         });
 
-        addToCartBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                object.setNumberIntCart(numberOrder);
-                managementCart.insertFood(object);
-            }
-        });
+
     }
 
     private void initView() {

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <TextView
+        android:id="@+id/locationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/irish_grover"
+        android:text="provide your location"
+        android:textColor="@color/black"
+        android:textSize="32dp" />
+
+    <EditText
+        android:id="@+id/buildingEdt"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/locationTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/rectangle_bg"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/fjord_one"
+        android:hint="building"
+        android:inputType="text"
+        android:maxLength="10"
+        android:paddingStart="30dp"
+        android:textColorHint="@color/gray" />
+
+    <EditText
+        android:layout_marginTop="-200dp"
+        android:id="@+id/roomEdt"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/buildingEdt"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle_bg"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/fjord_one"
+        android:hint="room number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:paddingStart="30dp"
+        android:textColorHint="@color/gray" />
+
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/roomEdt"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/fjord_one"
+        android:text="confirm your location"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

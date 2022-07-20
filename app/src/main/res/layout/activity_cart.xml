@@ -2,18 +2,106 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cartContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
-    android:id="@+id/cartContainer"
-    tools:context=".HomeActivity"
-    android:backgroundTint="@color/bottombar">
+    android:backgroundTint="@color/bottombar"
+    tools:context=".HomeActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavView"
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/irish_grover"
+        android:text="my cart"
+        android:textColor="@color/black"
+        android:textSize="36sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/bg"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_marginTop="100dp" />
+
+
+    <TextView
+        android:id="@+id/txtItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerViewCart"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/fjord_one"
+        android:text="Delivery Fee: "
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/totalFeeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerViewCart"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:text="kes 00"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtItem"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/fjord_one"
+        android:text="Total price : "
+        android:textColor="@color/black"
+        android:textSize="36dp" />
+
+    <TextView
+        android:id="@+id/totalTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalFeeTxt"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="kes 00"
+        android:textColor="@color/black"
+        android:textSize="36dp" />
+
+    <TextView
+        android:id="@+id/emptyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/fjord_one"
+        android:text="your cart is empty"
+        android:textColor="@color/red"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnCheckOut"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/totalTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/fjord_one"
+        android:text="checkout"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
 </RelativeLayout>

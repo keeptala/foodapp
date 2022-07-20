@@ -9,25 +9,29 @@
     android:id="@+id/parent">
 
     <TextView
+        android:id="@+id/loginTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:text="Login"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false"
-        android:fontFamily="@font/fjord_one"
-        android:textSize="24dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/irish_grover"
+        android:text="Login"
         android:textAlignment="center"
-        android:layout_marginTop="50dp" />
+        android:textAllCaps="true"
+        android:textColor="@color/green"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="343dp"
-        android:layout_height="187dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/loginTxt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/heartfood" />
+        android:layout_marginTop="50dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/userlogingreen" />
 
     <TextView
         android:id="@+id/txtWarnEmail"

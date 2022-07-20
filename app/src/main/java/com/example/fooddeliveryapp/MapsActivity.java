@@ -4,18 +4,14 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-public class SupportActivity extends AppCompatActivity {
+public class MapsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        BottomNavigationView bottomNavigationView = null;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_support);
+        setContentView(R.layout.activity_maps);
 
-        getSupportActionBar().setTitle("Support");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        getSupportActionBar().setTitle("google maps");
     }
 }

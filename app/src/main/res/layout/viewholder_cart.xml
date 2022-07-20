@@ -2,20 +2,22 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="155dp"
     android:background="@drawable/cart_bg">
 
+
+
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/cart_bg"
-        android:backgroundTint="@color/chilledgrey"
+        android:backgroundTint="@color/cream"
         android:padding="2dp">
 
         <ImageView
             android:id="@+id/pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -23,7 +25,7 @@
             android:src="@drawable/pizza" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -34,7 +36,9 @@
             android:textColor="@color/black"
             android:textSize="20dp" />
 
+
         <ImageView
+            android:id="@+id/minusItem"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
@@ -43,21 +47,23 @@
             android:src="@drawable/minus" />
 
         <TextView
+            android:id="@+id/num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
-            android:textSize="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="180dp"
             android:text="1"
             android:textColor="@color/black"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="180dp"/>
+            android:textSize="20dp" />
 
         <ImageView
+            android:id="@+id/plusItem"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="70dp"
-            android:layout_marginRight="138dp"
+            android:layout_marginRight="135dp"
             android:src="@drawable/plusone" />
 
         <TextView
@@ -65,20 +71,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginTop="70dp"
-            android:layout_marginRight="40dp"
-            android:text="kes "
+            android:layout_marginRight="70dp"
+            android:text="kes :"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
 
         <TextView
-            android:id="@+id/price"
+            android:id="@+id/totalEachItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginTop="70dp"
             android:layout_marginRight="10dp"
-            android:text="00"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="20dp" />
 

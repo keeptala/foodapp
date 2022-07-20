@@ -1,9 +1,9 @@
 package com.example.fooddeliveryapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,16 +14,15 @@ import com.google.android.material.navigation.NavigationBarView;
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     HomeFragment  homeFragment = new HomeFragment();
-//    SettingsFragment settingsFragment = new SettingsFragment();
-    SupportFragment supportFragment = new SupportFragment();
-//    ProfileFragment  profileFragment = new ProfileFragment();
-//    CartFragment cartFragment = new CartFragment();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        getSupportActionBar().setTitle("    Home");
+
 
         bottomNavigationView = findViewById(R.id.bottomNavView);
 
@@ -40,16 +39,16 @@ public class HomeActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
                         return true;
                     case R.id.profile:
-                        Toast.makeText(HomeActivity.this, "profiles", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.cart:
-                        Toast.makeText(HomeActivity.this, "cart", Toast.LENGTH_SHORT).show();
+                        Intent profile = new Intent(HomeActivity.this, ProfileActivity.class);
+                        startActivity(profile);
                         return true;
                     case R.id.support:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,supportFragment).commit();
+                        Intent support = new Intent(HomeActivity.this, SupportActivity.class);
+                        startActivity(support);
                         return true;
-                    case R.id.settings:
-                        Toast.makeText(HomeActivity.this, "settings", Toast.LENGTH_SHORT).show();
+                    case R.id.cart:
+                        Intent cart = new Intent(HomeActivity.this, CartActivity.class);
+                        startActivity(cart);
                         return true;
                 }
                 return false;

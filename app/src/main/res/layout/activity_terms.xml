@@ -7,11 +7,7 @@
     tools:context=".TermsActivity"
     android:background="@color/bg">
 
-    <view
-        class="android.widget.RelativeLayout"
-        android:layout_width="420dp"
-        android:layout_height="208dp"
-        android:background="@drawable/ic_facedowntermsandcondition" />
+
 
     <TextView
         android:layout_width="match_parent"
@@ -19,19 +15,6 @@
 
         />
 
-    <view
-        class="android.widget.RelativeLayout"
-        android:layout_width="420dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="598dp"
-        android:background="@drawable/ic_faceuptermsandcondition" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:src="@drawable/termsandconditions" />
 
     <TextView
         android:layout_width="314dp"

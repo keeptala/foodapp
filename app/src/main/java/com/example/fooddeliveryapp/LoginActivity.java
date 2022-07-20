@@ -39,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().setTitle("    Login");
+
         initializeGoTORegister();
         getToRegister();
 
@@ -79,7 +81,8 @@ public class LoginActivity extends AppCompatActivity {
                                         if (user.getPassword().equals(edtLoginPassword.getText().toString()) && !edtLoginPassword.getText().toString().equals("")) {
                                             txtWarnPassword.setVisibility(View.GONE);
                                             Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
-                                            Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                                            Intent homeIntent;
+                                            homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
                                             startActivity(homeIntent);
 
                                         } else {

@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginbg"
+    android:background="@color/bottombar"
     tools:context=".MainActivity">
-
-
 
 
     <TextView
@@ -15,31 +13,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="food delivery app"
-        android:textSize="45sp"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/fjord_one"
-        android:textStyle="bold"
-        android:textColor="@color/green"/>
+        android:fontFamily="@font/irish_grover"
+        android:text="food delivery"
+        android:textColor="@color/green"
+        android:textSize="45sp"
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/snapTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/txtName"
         android:layout_centerHorizontal="true"
-     android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="order , snap get eat"
-        android:textSize="19sp"
-        android:textColor="@color/green"
         android:fontFamily="@font/fjord_one"
-        android:textStyle="italic"/>
+        android:text="order , snap get eat"
+        android:textColor="@color/green"
+        android:textSize="19sp"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/snapTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/anotherlogo" />
 
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="80dp"
         android:background="@drawable/round_bg"
         android:text="login"
@@ -55,6 +63,19 @@
         android:background="@drawable/round_bg"
         android:text="register"
         android:textColor="@color/white" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnLogin"
+        android:layout_below="@+id/logoImg"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:lottie_rawRes="@raw/orderdelivery"
+        android:layout_marginRight="20dp"/>
 
 
 </RelativeLayout>

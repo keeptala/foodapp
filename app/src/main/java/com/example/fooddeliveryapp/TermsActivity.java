@@ -18,6 +18,8 @@ public class TermsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terms);
 
+        getSupportActionBar().setTitle("    Terms");
+
         intialize();
         AgreeAndContinue();
     }
